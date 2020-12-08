@@ -1,0 +1,38 @@
+<div class="container">
+    <form action="/" method="POST" class="mb-2">
+        <div class="form-group shadow-textarea">
+            <label for="exampleFormControlTextarea6">Shadow and placeholder</label>
+            <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
+                placeholder="Dear Santa..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<script>
+    document.onload = function () {
+        console.log('ps1');
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            send();
+        }, false);
+    }();
+
+
+    function send() {
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                console.log('ps5')
+                // document.location.reload();
+            }
+        }
+
+        var xml = '<?xml version="1.0" encoding="UTF-8"?>'+ '<msg>' + document.querySelector('textarea').value + '</msg>';
+        xhttp.open("POST", "/", true);
+        xhttp.setRequestHeader('Content-type', 'application/xml');
+        xhttp.send(xml);
+    };
+</script>

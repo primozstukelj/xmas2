@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  node-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gravity-falls-app
+    container_name: gravity-falls-app
+    restart: unless-stopped
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
+      - FLAG=xmas{S@nTa_Loves_Ex73rnal_Ent1t13$}
+    ports:
+      - "3000:4000"
+    command: npm start

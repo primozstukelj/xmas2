@@ -1,0 +1,28 @@
+{
+  "name": "xmasctf",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "body-parser-xml": "^2.0.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "express-session": "^1.17.1",
+    "express-xml-bodyparser": "^0.3.0",
+    "fs": "0.0.1-security",
+    "hbs": "^4.1.1",
+    "http-errors": "~1.6.3",
+    "libxmljs": "^0.19.7",
+    "morgan": "~1.9.1",
+    "uuid": "^8.3.1",
+    "ws": "^7.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
